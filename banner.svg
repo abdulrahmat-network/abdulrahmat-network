@@ -1,131 +1,225 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 260" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060913" />
-      <stop offset="50%" stop-color="#0b1325" />
-      <stop offset="100%" stop-color="#071a2c" />
-    </linearGradient>
+    <!-- Font & Styling -->
+    <style>
+      .bg { fill: #0d0d0d; }
+      .grid-line { stroke: #262626; stroke-width: 1; }
+      .grid-dashed { stroke: #262626; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+      .circle-line { stroke: #2e2e2e; stroke-width: 1; fill: none; }
+      
+      .title-solid {
+        font-family: 'Inter', 'Helvetica Neue', 'Arial Black', sans-serif;
+        font-weight: 900;
+        font-size: 68px;
+        fill: #ffffff;
+        letter-spacing: -1.5px;
+      }
+      .title-outline {
+        font-family: 'Inter', 'Helvetica Neue', 'Arial Black', sans-serif;
+        font-weight: 900;
+        font-size: 62px;
+        fill: transparent;
+        stroke: #ffffff;
+        stroke-width: 1.8px;
+        letter-spacing: -0.5px;
+      }
+      .subtitle {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        fill: #d4d4d4;
+        letter-spacing: -0.2px;
+      }
+      .mono-sm {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+        font-size: 12px;
+        fill: #a3a3a3;
+        letter-spacing: 1px;
+      }
+      .mono-bold {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 12px;
+        fill: #ffffff;
+        letter-spacing: 1px;
+      }
+      .mono-accent {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 12px;
+        fill: #ff3b1d;
+        letter-spacing: 1px;
+      }
+      .badge-text {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 13px;
+        fill: #0d0d0d;
+        letter-spacing: 0.5px;
+      }
+      .node-label {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+        font-size: 9px;
+        fill: #737373;
+        letter-spacing: 0.8px;
+      }
 
-    <!-- Cyan Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+      /* Animations */
+      @keyframes spinSlow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes spinReverse {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      @keyframes pulseCore {
+        0%, 100% { opacity: 1; r: 4px; }
+        50% { opacity: 0.35; r: 7px; }
+      }
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes packetMove {
+        0% { stroke-dashoffset: 240; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .rotator-cw {
+        transform-origin: 1010px 185px;
+        animation: spinSlow 18s linear infinite;
+      }
+      .rotator-ccw {
+        transform-origin: 1010px 185px;
+        animation: spinReverse 26s linear infinite;
+      }
+      .core-pulse {
+        animation: pulseCore 3s ease-in-out infinite;
+      }
+      .cursor-blink {
+        animation: blink 1.1s infinite;
+      }
+      .packet-flow {
+        stroke-dasharray: 6 18;
+        animation: packetMove 6s linear infinite;
+      }
+    </style>
+
+    <!-- Soft Glow for Red Arc -->
+    <filter id="red-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
-
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.6" />
-    </pattern>
-
-    <!-- Network Paths for Animated Packets -->
-    <path id="link1" d="M 550 60 L 700 130 L 880 70" fill="none" />
-    <path id="link2" d="M 550 200 L 700 130 L 900 190" fill="none" />
-    <path id="link3" d="M 450 130 L 700 130" fill="none" />
   </defs>
 
-  <style>
-    .title { font: 800 42px 'JetBrains Mono', 'Fira Code', monospace; fill: #ffffff; letter-spacing: 3px; }
-    .subtitle { font: 600 15px 'JetBrains Mono', monospace; fill: #38bdf8; letter-spacing: 4px; }
-    .cli { font: 500 14px 'JetBrains Mono', monospace; fill: #94a3b8; }
-    .badge { font: 700 11px 'JetBrains Mono', monospace; fill: #10b981; letter-spacing: 1.5px; }
-    .node-label { font: 600 10px 'JetBrains Mono', monospace; fill: #64748b; }
-    .pulse-line {
-      stroke-dasharray: 8 6;
-      animation: dash 12s linear infinite;
-    }
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    @keyframes dash {
-      to { stroke-dashoffset: -200; }
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-  </style>
+  <!-- 1. BACKGROUND -->
+  <rect width="1200" height="360" class="bg" />
 
-  <!-- Background & Cyber Grid -->
-  <rect width="1000" height="260" rx="12" fill="url(#bg)" />
-  <rect width="1000" height="260" rx="12" fill="url(#grid)" />
-  <rect x="1" y="1" width="998" height="258" rx="12" fill="none" stroke="#1e293b" stroke-width="2" />
+  <!-- 2. SWISS ARCHITECTURAL GRID -->
+  <!-- Horizontal Lines -->
+  <line x1="0" y1="52" x2="1200" y2="52" class="grid-line" />
+  <line x1="0" y1="316" x2="1200" y2="316" class="grid-line" />
+  <line x1="850" y1="185" x2="1200" y2="185" class="grid-line" stroke-opacity="0.4" />
+  
+  <!-- Vertical Lines -->
+  <line x1="850" y1="0" x2="850" y2="360" class="grid-line" />
+  <line x1="1010" y1="0" x2="1010" y2="52" class="grid-line" />
 
-  <!-- Animated Network Topology (Right Side) -->
-  <g opacity="0.85">
-    <!-- Static Fiber Links -->
-    <use href="#link1" stroke="#1e3a5f" stroke-width="2" />
-    <use href="#link2" stroke="#1e3a5f" stroke-width="2" />
-    <use href="#link3" stroke="#1e3a5f" stroke-width="2" />
-    <line x1="550" y1="60" x2="550" y2="200" stroke="#1e3a5f" stroke-width="1.5" class="pulse-line" />
-    <line x1="880" y1="70" x2="900" y2="190" stroke="#1e3a5f" stroke-width="1.5" class="pulse-line" />
-
-    <!-- Animated Data Packets Moving Across Links -->
-    <circle r="4" fill="#00f7ff" filter="url(#glow)">
-      <animateMotion dur="3s" repeatCount="indefinite">
-        <mpath href="#link1" />
-      </animateMotion>
-    </circle>
-    <circle r="4" fill="#10b981" filter="url(#glow)">
-      <animateMotion dur="3.8s" repeatCount="indefinite">
-        <mpath href="#link2" />
-      </animateMotion>
-    </circle>
-    <circle r="3.5" fill="#38bdf8" filter="url(#glow)">
-      <animateMotion dur="2.2s" repeatCount="indefinite">
-        <mpath href="#link3" />
-      </animateMotion>
-    </circle>
-
-    <!-- Network Nodes -->
-    <g transform="translate(450, 130)">
-      <circle r="6" fill="#0ea5e9" />
-      <text x="-30" y="22" class="node-label">EDGE-GW</text>
-    </g>
-    <g transform="translate(550, 60)">
-      <circle r="7" fill="#38bdf8" />
-      <text x="-25" y="-14" class="node-label">BGP-01</text>
-    </g>
-    <g transform="translate(550, 200)">
-      <circle r="7" fill="#38bdf8" />
-      <text x="-25" y="22" class="node-label">SW-DIST</text>
-    </g>
-    <!-- Core Router Hub with Radar Pulse -->
-    <g transform="translate(700, 130)">
-      <circle r="10" fill="none" stroke="#00f7ff" stroke-width="2">
-        <animate attributeName="r" values="8;26;8" dur="3s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.9;0;0.9" dur="3s" repeatCount="indefinite" />
-      </circle>
-      <circle r="9" fill="#00f7ff" filter="url(#glow)" />
-      <text x="-28" y="26" class="node-label" fill="#38bdf8">CORE-RTR</text>
-    </g>
-    <g transform="translate(880, 70)">
-      <circle r="7" fill="#10b981" />
-      <text x="-25" y="-14" class="node-label">CLOUD-A</text>
-    </g>
-    <g transform="translate(900, 190)">
-      <circle r="7" fill="#10b981" />
-      <text x="-25" y="22" class="node-label">CLOUD-B</text>
-    </g>
+  <!-- 3. TOP BAR METADATA -->
+  <!-- Geometric Node Icon (Top Left) -->
+  <g transform="translate(42, 26)">
+    <polygon points="0,-13 11,-6.5 11,6.5 0,13 -11,6.5 -11,-6.5" fill="none" stroke="#737373" stroke-width="1" />
+    <line x1="0" y1="-13" x2="0" y2="13" stroke="#404040" stroke-width="0.8" />
+    <line x1="-11" y1="-6.5" x2="11" y2="6.5" stroke="#404040" stroke-width="0.8" />
+    <line x1="-11" y1="6.5" x2="11" y2="-6.5" stroke="#404040" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="2.5" fill="#ff3b1d" />
+    <circle cx="0" cy="-13" r="1.5" fill="#d4d4d4" />
+    <circle cx="11" cy="-6.5" r="1.5" fill="#d4d4d4" />
+    <circle cx="11" cy="6.5" r="1.5" fill="#d4d4d4" />
+    <circle cx="0" cy="13" r="1.5" fill="#d4d4d4" />
+    <circle cx="-11" cy="6.5" r="1.5" fill="#d4d4d4" />
+    <circle cx="-11" cy="-6.5" r="1.5" fill="#d4d4d4" />
   </g>
 
-  <!-- Left Content / HUD Text -->
-  <g transform="translate(55, 62)">
-    <!-- Status Pill -->
-    <rect x="0" y="-18" width="275" height="26" rx="13" fill="#06281e" stroke="#10b981" stroke-width="1" />
-    <circle cx="16" cy="-5" r="4.5" fill="#10b981">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite" />
-    </circle>
-    <text x="30" y="-1" class="badge">LINK UP • 10GBPS FULL-DUPLEX</text>
+  <text x="68" y="31" class="mono-bold">ABDUL RAHMAT</text>
+  <text x="176" y="31" class="mono-accent">//</text>
+  <text x="198" y="31" class="mono-sm">NETWORK ENGINEER</text>
 
-    <!-- Main Name & Role -->
-    <text x="0" y="52" class="title">ABDUL RAHMAT</text>
-    <text x="2" y="82" class="subtitle">NETWORK &amp; INFRASTRUCTURE ENGINEER</text>
+  <text x="1168" y="23" text-anchor="end" class="mono-sm">ESTD. 2026</text>
+  <text x="1168" y="39" text-anchor="end" class="mono-sm" fill="#737373">abdulrahmat-network</text>
 
-    <!-- Terminal Prompt -->
-    <rect x="0" y="106" width="430" height="36" rx="6" fill="#090d16" stroke="#1e293b" stroke-width="1.2" />
-    <text x="14" y="129" class="cli">
-      <tspan fill="#10b981">root@abdulrahmat-network</tspan>:<tspan fill="#38bdf8">~</tspan># ./status.sh <tspan class="cursor" fill="#00f7ff">█</tspan>
-    </text>
+  <!-- 4. MAIN TYPOGRAPHY (LEFT SECTION) -->
+  <text x="30" y="138" class="title-solid">ABDUL RAHMAT</text>
+  <text x="30" y="206" class="title-outline">NETWORK ENGINEER</text>
+
+  <!-- Orange Brutalist Handle Badge -->
+  <rect x="32" y="226" width="166" height="26" rx="1" fill="#ff3b1d" />
+  <text x="41" y="243" class="badge-text">abdulrahmat-network</text>
+
+  <!-- Live Status Indicator next to Badge -->
+  <circle cx="216" cy="239" r="3.5" fill="#ff3b1d" class="core-pulse" />
+  <text x="226" y="243" class="node-label" fill="#a3a3a3">BGP.STATE // ESTABLISHED</text>
+
+  <!-- Tagline with Blinking Terminal Cursor -->
+  <text x="32" y="286" class="subtitle">
+    Building, automating, and securing network infrastructure.<tspan class="cursor-blink" fill="#ff3b1d" font-weight="700">_</tspan>
+  </text>
+
+  <!-- 5. ANIMATED RADAR & TOPOLOGY DIAL (RIGHT SECTION) -->
+  <!-- Static Concentric Rings -->
+  <circle cx="1010" cy="185" r="118" class="circle-line" />
+  <circle cx="1010" cy="185" r="95" class="circle-line" />
+  <circle cx="1010" cy="185" r="74" class="grid-dashed" />
+  <circle cx="1010" cy="185" r="52" class="circle-line" />
+  <circle cx="1010" cy="185" r="32" class="grid-dashed" />
+  <circle cx="1010" cy="185" r="12" class="circle-line" stroke="#525252" />
+
+  <!-- Diagonal Topology Vectors -->
+  <line x1="914" y1="115" x2="1106" y2="255" stroke="#262626" stroke-width="1" />
+  <line x1="926" y1="269" x2="1094" y2="101" stroke="#262626" stroke-width="1" />
+
+  <!-- Animated Packet Flow along Topology Lines -->
+  <line x1="914" y1="115" x2="1106" y2="255" stroke="#525252" stroke-width="1.2" class="packet-flow" />
+  <line x1="926" y1="269" x2="1094" y2="101" stroke="#ff3b1d" stroke-width="1.2" stroke-opacity="0.6" class="packet-flow" />
+
+  <!-- Counter-Clockwise Rotating Technical Ring -->
+  <g class="rotator-ccw">
+    <path d="M 958 185 A 52 52 0 0 1 1010 133" fill="none" stroke="#737373" stroke-width="1.8" />
+    <path d="M 1062 185 A 52 52 0 0 1 1010 237" fill="none" stroke="#404040" stroke-width="1.5" />
+    <circle cx="1010" cy="133" r="2.5" fill="#a3a3a3" />
   </g>
+
+  <!-- Clockwise Rotating Primary Orange-Red Arc -->
+  <g class="rotator-cw">
+    <path d="M 955 130 A 78 78 0 0 1 1065 130" fill="none" stroke="#ff3b1d" stroke-width="3.5" filter="url(#red-glow)" />
+    <circle cx="1065" cy="130" r="3" fill="#ffffff" />
+  </g>
+
+  <!-- Topology Nodes & Labels -->
+  <!-- CORE Center Node -->
+  <circle cx="1010" cy="185" r="3.5" fill="#ff3b1d" class="core-pulse" />
+  <text x="1025" y="188" class="node-label" fill="#a3a3a3">CORE</text>
+
+  <!-- WAN Node Top-Left -->
+  <circle cx="932" cy="96" r="4" fill="#525252" />
+  <text x="904" y="99" class="node-label">WAN</text>
+
+  <!-- WAN Node Mid-Right -->
+  <circle cx="1044" cy="148" r="4" fill="#171717" stroke="#737373" stroke-width="1.2" />
+  <text x="1052" y="151" class="node-label">WAN</text>
+
+  <!-- WAN Node Bottom-Left -->
+  <circle cx="972" cy="222" r="4" fill="#171717" stroke="#737373" stroke-width="1.2" />
+  <text x="945" y="225" class="node-label">WAN</text>
+
+  <!-- Outer Edge Nodes -->
+  <circle cx="1093" cy="102" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
+  <circle cx="927" cy="268" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
+  <circle cx="1093" cy="268" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
+
+  <!-- 6. BOTTOM BAR PILLARS -->
+  <text x="32" y="342" class="mono-sm">01 <tspan class="mono-accent">/</tspan> ROUTING & SWITCHING</text>
+  <text x="530" y="342" class="mono-sm">02 <tspan class="mono-accent">/</tspan> AUTOMATION</text>
+  <text x="1168" y="342" text-anchor="end" class="mono-sm">03 <tspan class="mono-accent">/</tspan> HOMELAB</text>
 </svg>
