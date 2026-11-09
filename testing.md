@@ -29,7 +29,6 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 | `OSPF` · `BGP` · `MPLS` | `VLAN / QinQ` | `Ansible` · `Bash` | `Proxmox VE` |
 | `VRRP / Failover` | `Zero Trust Access` | `Python Netmiko` | `Wireshark` |
 
-<br />
 <img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
 <br />
 </div>
