@@ -36,15 +36,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 
 ### `rahmat-core# show lldp neighbors`
 
-> **Active Lab Focus** — Building automated multi-vendor network topologies, hardening edge routers, and documenting production-grade configurations.
-
-<div align="center">
-  <br />
-  <sub><b>CONNECT // PEERING REQUEST</b></sub>
-  <br /><br />
-  <a href="https://github.com/abdulrahmat-network"><kbd>GitHub</kbd></a>&nbsp;&nbsp;
-  <a href="https://linkedin.com"><kbd>LinkedIn</kbd></a>&nbsp;&nbsp;
-  <a href="mailto:abdulrahmat@example.com"><kbd>Email</kbd></a>
+[GitHub](https://github.com/abdulrahmat-network) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/your-handle) &nbsp;·&nbsp; [Email](mailto:you@example.com)
   <img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
   <br /><br />
   <sub><code>root@abdulrahmat-network:~# exit</code></sub>
