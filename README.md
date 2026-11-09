@@ -1,3 +1,4 @@
+<img src="./banner.svg" width="100%" />
 # 🌐 Setup GitHub Profile: `abdulrahmat-network`
 
 > **Kenapa banner sebelumnya tidak muncul di preview?**  
