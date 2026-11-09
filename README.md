@@ -7,6 +7,8 @@
 
 ### `rahmat-core# show version`
 
+
+
 Focusing on resilient **network architecture**, **routing & switching**, and **infrastructure automation**. I design, simulate, and deploy high-availability networks—bridging traditional hardware topologies with modern Linux and cloud-native environments.
 
 ```ini
@@ -29,6 +31,8 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 
 <br />
 
+<img src="./stack-panel.svg" width="100%" alt="MikroTik, Cisco IOS, WireGuard, Linux, Ansible, Python, Proxmox, EVE-NG" />
+
 ### `rahmat-core# show lldp neighbors`
 
 > **Active Lab Focus** — Building automated multi-vendor network topologies, hardening edge routers, and documenting production-grade configurations.
@@ -42,4 +46,6 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
   <a href="mailto:abdulrahmat@example.com"><kbd>Email</kbd></a>
   <br /><br />
   <sub><code>root@abdulrahmat-network:~# exit</code></sub>
+  
 </div>
+<img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
