@@ -1,4 +1,4 @@
-<img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network Engineer" />
+<img src="./assets/banner.svg" width="100%" alt="Abdul Rahmat — Network Engineer" />
 
 <br />
 
@@ -20,7 +20,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 ### `rahmat-core# show interfaces status`
 <div align="center">
 
-<img src="./stack-panel.svg" width="100%" alt="MikroTik, Cisco IOS, WireGuard, Linux, Ansible, Python, Proxmox, EVE-NG" />
+<img src="./assets/stack-panel.svg" width="100%" alt="MikroTik, Cisco IOS, WireGuard, Linux, Ansible, Python, Proxmox, EVE-NG" />
 
 | **Network & Routing** | **Security & Tunneling** | **SysAdmin & Automation** | **Simulation & Virtualization** |
 | :---: | :---: | :---: | :---: |
@@ -29,7 +29,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 | `OSPF` · `BGP` · `MPLS` | `VLAN / QinQ` | `Ansible` · `Bash` | `Proxmox VE` |
 | `VRRP / Failover` | `Zero Trust Access` | `Python Netmiko` | `Wireshark` |
 
-<img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
+<img src="./assets/footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
 <br />
 </div>
 
