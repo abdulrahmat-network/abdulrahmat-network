@@ -1,165 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Abdul Rahmat — Network Engineer">
+  <title>Abdul Rahmat — Network Engineer</title>
   <defs>
-    <!-- Font & Styling -->
     <style>
       .bg { fill: #0d0d0d; }
       .grid-line { stroke: #262626; stroke-width: 1; }
       .grid-dashed { stroke: #262626; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
       .circle-line { stroke: #2e2e2e; stroke-width: 1; fill: none; }
-      
+
       .title-solid {
-        font-family: 'Inter', 'Helvetica Neue', 'Arial Black', sans-serif;
+        font-family: 'Inter', 'Helvetica Neue', Helvetica, 'Arial Black', Arial, sans-serif;
         font-weight: 900;
-        font-size: 68px;
+        font-size: 64px;
         fill: #ffffff;
-        letter-spacing: -1.5px;
       }
       .title-outline {
-        font-family: 'Inter', 'Helvetica Neue', 'Arial Black', sans-serif;
+        font-family: 'Inter', 'Helvetica Neue', Helvetica, 'Arial Black', Arial, sans-serif;
         font-weight: 900;
-        fill: transparent;
+        font-size: 44px;
+        fill: none;
         stroke: #ffffff;
-        stroke-width: 1.8px;
-        letter-spacing: -0.5px;
-      }
-      .subtitle {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-weight: 400;
-        font-size: 18px;
-        fill: #d4d4d4;
-        letter-spacing: -0.2px;
-      }
-      .mono-sm {
-        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-        font-size: 12px;
-        fill: #a3a3a3;
-        letter-spacing: 1px;
-      }
-      .mono-bold {
-        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-        font-weight: 700;
-        font-size: 12px;
-        fill: #ffffff;
-        letter-spacing: 1px;
-      }
-      .mono-accent {
-        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-        font-weight: 700;
-        font-size: 12px;
-        fill: #ff3b1d;
-        letter-spacing: 1px;
-      }
-      .badge-text {
-        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-        font-weight: 700;
-        font-size: 13px;
-        fill: #0d0d0d;
+        stroke-width: 1.4px;
         letter-spacing: 0.5px;
       }
-      .node-label {
-        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-        font-size: 9px;
-        fill: #737373;
-        letter-spacing: 0.8px;
+      .subtitle {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        font-size: 18px;
+        fill: #d4d4d4;
       }
+      .mono-sm, .mono-bold, .mono-accent, .badge-text, .node-label {
+        font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+      }
+      .mono-sm     { font-size: 12px; fill: #a3a3a3; letter-spacing: 1px; }
+      .mono-bold   { font-size: 12px; fill: #ffffff; font-weight: 700; letter-spacing: 1px; }
+      .mono-accent { font-size: 12px; fill: #ff3b1d; font-weight: 700; letter-spacing: 1px; }
+      .badge-text  { font-size: 13px; fill: #0d0d0d; font-weight: 700; }
+      .node-label  { font-size: 9px;  fill: #737373; letter-spacing: 0.8px; }
 
-      /* Animations */
-      @keyframes spinSlow {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      @keyframes spinReverse {
-        from { transform: rotate(360deg); }
-        to { transform: rotate(0deg); }
-      }
-      @keyframes pulseCore {
-        0%, 100% { opacity: 1; r: 4px; }
-        50% { opacity: 0.35; r: 7px; }
+      /* ---------- Animations ---------- */
+      @keyframes spin    { to { transform: rotate(360deg); } }
+      @keyframes spinRev { to { transform: rotate(-360deg); } }
+      @keyframes pulse {
+        0%, 100% { opacity: 1;   transform: scale(1); }
+        50%      { opacity: 0.4; transform: scale(1.8); }
       }
       @keyframes blink {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
+        0%, 50%   { opacity: 1; }
+        51%, 100% { opacity: 0; }
       }
-      @keyframes packetMove {
-        0% { stroke-dashoffset: 240; }
-        100% { stroke-dashoffset: 0; }
+      @keyframes packet { from { stroke-dashoffset: 120; } to { stroke-dashoffset: 0; } }
+
+      /* One shared keyframe for all 5 roles: each role is visible for 3s of a 15s loop */
+      @keyframes roll {
+        0%        { opacity: 0; transform: translateY(14px); }
+        4%, 18%   { opacity: 1; transform: translateY(0); }
+        22%, 100% { opacity: 0; transform: translateY(-14px); }
       }
 
-      /* 5 Roles Cyclical Rolling Animation (Total 15s cycle) */
-      @keyframes roll1 {
-        0%, 16%   { opacity: 1; transform: translateY(0); }
-        20%, 100% { opacity: 0; transform: translateY(-15px); }
+      .rotator-cw, .rotator-ccw {
+        transform-box: view-box;
+        transform-origin: 1025px 184px;
       }
-      @keyframes roll2 {
-        0%, 16%   { opacity: 0; transform: translateY(15px); }
-        20%, 36%  { opacity: 1; transform: translateY(0); }
-        40%, 100% { opacity: 0; transform: translateY(-15px); }
-      }
-      @keyframes roll3 {
-        0%, 36%   { opacity: 0; transform: translateY(15px); }
-        40%, 56%  { opacity: 1; transform: translateY(0); }
-        60%, 100% { opacity: 0; transform: translateY(-15px); }
-      }
-      @keyframes roll4 {
-        0%, 56%   { opacity: 0; transform: translateY(15px); }
-        60%, 76%  { opacity: 1; transform: translateY(0); }
-        80%, 100% { opacity: 0; transform: translateY(-15px); }
-      }
-      @keyframes roll5 {
-        0%, 76%   { opacity: 0; transform: translateY(15px); }
-        80%, 96%  { opacity: 1; transform: translateY(0); }
-        100%      { opacity: 0; transform: translateY(-15px); }
-      }
+      .rotator-cw  { animation: spin 18s linear infinite; }
+      .rotator-ccw { animation: spinRev 26s linear infinite; }
 
-      .rotator-cw {
-        transform-origin: 1010px 185px;
-        animation: spinSlow 18s linear infinite;
-      }
-      .rotator-ccw {
-        transform-origin: 1010px 185px;
-        animation: spinReverse 26s linear infinite;
-      }
       .core-pulse {
-        animation: pulseCore 3s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: pulse 3s ease-in-out infinite;
       }
-      .cursor-blink {
-        animation: blink 1.1s infinite;
-      }
+      .cursor-blink { animation: blink 1.1s step-end infinite; }
+
       .packet-flow {
         stroke-dasharray: 6 18;
-        animation: packetMove 6s linear infinite;
+        animation: packet 4s linear infinite;
       }
 
-      /* Role Animation Classes */
-      .r-1 { animation: roll1 15s infinite; }
-      .r-2 { animation: roll2 15s infinite; }
-      .r-3 { animation: roll3 15s infinite; }
-      .r-4 { animation: roll4 15s infinite; }
-      .r-5 { animation: roll5 15s infinite; }
+      .role { opacity: 0; animation: roll 15s ease-in-out infinite both; }
+      .r-1 { animation-delay: 0s; }
+      .r-2 { animation-delay: 3s; }
+      .r-3 { animation-delay: 6s; }
+      .r-4 { animation-delay: 9s; }
+      .r-5 { animation-delay: 12s; }
+
+      /* Respect users who disable motion: show only the first role, static */
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; }
+        .r-1 { opacity: 1; }
+      }
     </style>
 
-    <!-- Soft Glow for Red Arc -->
-    <filter id="red-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="red-glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="3" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
     </filter>
   </defs>
 
   <!-- 1. BACKGROUND -->
   <rect width="1200" height="360" class="bg" />
 
-  <!-- 2. SWISS ARCHITECTURAL GRID -->
-  <!-- Horizontal Lines -->
+  <!-- 2. GRID (band 52–316, right panel 850–1200, panel centre x=1025 y=184) -->
   <line x1="0" y1="52" x2="1200" y2="52" class="grid-line" />
   <line x1="0" y1="316" x2="1200" y2="316" class="grid-line" />
-  <line x1="850" y1="185" x2="1200" y2="185" class="grid-line" stroke-opacity="0.4" />
-  
-  <!-- Vertical Lines -->
+  <line x1="850" y1="184" x2="1200" y2="184" class="grid-line" stroke-opacity="0.4" />
   <line x1="850" y1="0" x2="850" y2="360" class="grid-line" />
-  <line x1="1010" y1="0" x2="1010" y2="52" class="grid-line" />
+  <line x1="1025" y1="0" x2="1025" y2="52" class="grid-line" />
 
-  <!-- 3. TOP BAR METADATA -->
-  <!-- Geometric Node Icon (Top Left) -->
+  <!-- 3. TOP BAR -->
   <g transform="translate(42, 26)">
     <polygon points="0,-13 11,-6.5 11,6.5 0,13 -11,6.5 -11,-6.5" fill="none" stroke="#737373" stroke-width="1" />
     <line x1="0" y1="-13" x2="0" y2="13" stroke="#404040" stroke-width="0.8" />
@@ -174,92 +123,88 @@
     <circle cx="-11" cy="-6.5" r="1.5" fill="#d4d4d4" />
   </g>
 
-  <text x="68" y="31" class="mono-bold">ABDUL RAHMAT</text>
-  <text x="176" y="31" class="mono-accent">//</text>
-  <text x="198" y="31" class="mono-sm">NETWORK ENGINEER</text>
+  <!-- single text run so spacing follows whatever font is available -->
+  <text x="68" y="31"><tspan class="mono-bold">ABDUL RAHMAT</tspan><tspan class="mono-accent" dx="10">//</tspan><tspan class="mono-sm" dx="10">NETWORK ENGINEER</tspan></text>
 
   <text x="1168" y="23" text-anchor="end" class="mono-sm">ESTD. 2026</text>
-  <text x="1168" y="39" text-anchor="end" class="mono-sm" fill="#737373">abdulrahmat-network</text>
+  <text x="1168" y="39" text-anchor="end" class="mono-sm" style="fill:#737373">abdulrahmat-network</text>
 
-  <!-- 4. MAIN TYPOGRAPHY (LEFT SECTION) -->
-  <text x="30" y="138" class="title-solid">ABDUL RAHMAT</text>
-  
-  <!-- Rolling Dynamic Roles Container (5 Roles) -->
-  <g transform="translate(30, 206)">
-    <text x="0" y="0" class="title-outline r-1" style="font-size: 58px;">NETWORK ENGINEER</text>
-    <text x="0" y="0" class="title-outline r-2" style="font-size: 58px;">NOC OPERATIONS</text>
-    <text x="0" y="0" class="title-outline r-3" style="font-size: 50px;">ROUTING & SWITCHING</text>
-    <text x="0" y="0" class="title-outline r-4" style="font-size: 52px;">INFRASTRUCTURE TECH</text>
-    <text x="0" y="0" class="title-outline r-5" style="font-size: 52px;">HOMELAB ENTHUSIAST</text>
+  <!-- 4. MAIN TYPOGRAPHY -->
+  <text x="30" y="132" class="title-solid" textLength="580" lengthAdjust="spacingAndGlyphs">ABDUL RAHMAT</text>
+
+  <!-- Rolling roles (5 × 3s) -->
+  <g transform="translate(32, 190)">
+    <text class="title-outline role r-1">NETWORK ENGINEER</text>
+    <text class="title-outline role r-2">NOC OPERATIONS</text>
+    <text class="title-outline role r-3">ROUTING &amp; SWITCHING</text>
+    <text class="title-outline role r-4">INFRASTRUCTURE TECH</text>
+    <text class="title-outline role r-5">HOMELAB ENTHUSIAST</text>
   </g>
 
-  <!-- Orange Brutalist Handle Badge -->
-  <rect x="32" y="226" width="166" height="26" rx="1" fill="#ff3b1d" />
-  <text x="41" y="243" class="badge-text">abdulrahmat-network</text>
+  <!-- Handle badge -->
+  <rect x="32" y="214" width="166" height="26" rx="1" fill="#ff3b1d" />
+  <text x="41" y="231" class="badge-text" textLength="148" lengthAdjust="spacingAndGlyphs">abdulrahmat-network</text>
 
-  <!-- Live Status Indicator next to Badge -->
-  <circle cx="216" cy="239" r="3.5" fill="#ff3b1d" class="core-pulse" />
-  <text x="226" y="243" class="node-label" fill="#a3a3a3">BGP.STATE // ESTABLISHED</text>
+  <!-- Live status -->
+  <circle cx="216" cy="227" r="3.5" fill="#ff3b1d" class="core-pulse" />
+  <text x="228" y="230" class="node-label" style="fill:#a3a3a3">BGP.STATE // ESTABLISHED</text>
 
-  <!-- Tagline with Blinking Terminal Cursor -->
-  <text x="32" y="286" class="subtitle">
-    Building, automating, and securing network infrastructure.<tspan class="cursor-blink" fill="#ff3b1d" font-weight="700">_</tspan>
-  </text>
+  <!-- Tagline -->
+  <text x="32" y="282" class="subtitle">Building, automating, and securing network infrastructure.<tspan class="cursor-blink" style="fill:#ff3b1d" font-weight="700">_</tspan></text>
 
-  <!-- 5. ANIMATED RADAR & TOPOLOGY DIAL (RIGHT SECTION) -->
-  <!-- Static Concentric Rings -->
-  <circle cx="1010" cy="185" r="118" class="circle-line" />
-  <circle cx="1010" cy="185" r="95" class="circle-line" />
-  <circle cx="1010" cy="185" r="74" class="grid-dashed" />
-  <circle cx="1010" cy="185" r="52" class="circle-line" />
-  <circle cx="1010" cy="185" r="32" class="grid-dashed" />
-  <circle cx="1010" cy="185" r="12" class="circle-line" stroke="#525252" />
+  <!-- 5. RADAR / TOPOLOGY DIAL (centre 1025,184) -->
+  <circle cx="1025" cy="184" r="118" class="circle-line" />
+  <circle cx="1025" cy="184" r="95" class="circle-line" />
+  <circle cx="1025" cy="184" r="74" class="grid-dashed" />
+  <circle cx="1025" cy="184" r="52" class="circle-line" />
+  <circle cx="1025" cy="184" r="32" class="grid-dashed" />
+  <circle cx="1025" cy="184" r="12" class="circle-line" style="stroke:#525252" />
 
-  <!-- Diagonal Topology Vectors -->
-  <line x1="914" y1="115" x2="1106" y2="255" stroke="#262626" stroke-width="1" />
-  <line x1="926" y1="269" x2="1094" y2="101" stroke="#262626" stroke-width="1" />
+  <!-- Diagonals: exact 45° through the centre, ending on the outer ring -->
+  <line x1="941.56" y1="100.56" x2="1108.44" y2="267.44" stroke="#262626" stroke-width="1" />
+  <line x1="941.56" y1="267.44" x2="1108.44" y2="100.56" stroke="#262626" stroke-width="1" />
 
-  <!-- Animated Packet Flow along Topology Lines -->
-  <line x1="914" y1="115" x2="1106" y2="255" stroke="#525252" stroke-width="1.2" class="packet-flow" />
-  <line x1="926" y1="269" x2="1094" y2="101" stroke="#ff3b1d" stroke-width="1.2" stroke-opacity="0.6" class="packet-flow" />
+  <!-- Packets: WAN → CORE inbound (red), CORE → DC / LAN / LAB outbound (grey) -->
+  <line x1="941.56" y1="100.56" x2="1025" y2="184" stroke="#ff3b1d" stroke-width="1.4" stroke-opacity="0.8" class="packet-flow" />
+  <line x1="1025" y1="184" x2="1108.44" y2="100.56" stroke="#737373" stroke-width="1.2" class="packet-flow" />
+  <line x1="1025" y1="184" x2="941.56" y2="267.44" stroke="#737373" stroke-width="1.2" class="packet-flow" />
+  <line x1="1025" y1="184" x2="1108.44" y2="267.44" stroke="#737373" stroke-width="1.2" class="packet-flow" />
 
-  <!-- Counter-Clockwise Rotating Technical Ring -->
+  <!-- Counter-clockwise ring (r=52) -->
   <g class="rotator-ccw">
-    <path d="M 958 185 A 52 52 0 0 1 1010 133" fill="none" stroke="#737373" stroke-width="1.8" />
-    <path d="M 1062 185 A 52 52 0 0 1 1010 237" fill="none" stroke="#404040" stroke-width="1.5" />
-    <circle cx="1010" cy="133" r="2.5" fill="#a3a3a3" />
+    <path d="M 973 184 A 52 52 0 0 1 1025 132" fill="none" stroke="#737373" stroke-width="1.8" />
+    <path d="M 1077 184 A 52 52 0 0 1 1025 236" fill="none" stroke="#404040" stroke-width="1.5" />
+    <circle cx="1025" cy="132" r="2.5" fill="#a3a3a3" />
   </g>
 
-  <!-- Clockwise Rotating Primary Orange-Red Arc -->
+  <!-- Clockwise red arc (r=74, sits on the dashed ring) -->
   <g class="rotator-cw">
-    <path d="M 955 130 A 78 78 0 0 1 1065 130" fill="none" stroke="#ff3b1d" stroke-width="3.5" filter="url(#red-glow)" />
-    <circle cx="1065" cy="130" r="3" fill="#ffffff" />
+    <path d="M 972.67 131.67 A 74 74 0 0 1 1077.33 131.67" fill="none" stroke="#ff3b1d" stroke-width="3.5" stroke-linecap="round" filter="url(#red-glow)" />
+    <circle cx="1077.33" cy="131.67" r="3" fill="#ffffff" />
   </g>
 
-  <!-- Topology Nodes & Labels -->
-  <!-- CORE Center Node -->
-  <circle cx="1010" cy="185" r="3.5" fill="#ff3b1d" class="core-pulse" />
-  <text x="1025" y="188" class="node-label" fill="#a3a3a3">CORE</text>
+  <!-- Inner distribution nodes (r=52 on diagonals) -->
+  <circle cx="988.23" cy="147.23" r="3.5" fill="#525252" />
+  <circle cx="1061.77" cy="147.23" r="3.5" fill="#171717" stroke="#737373" stroke-width="1.2" />
+  <circle cx="988.23" cy="220.77" r="3.5" fill="#171717" stroke="#737373" stroke-width="1.2" />
+  <circle cx="1061.77" cy="220.77" r="3.5" fill="#171717" stroke="#737373" stroke-width="1.2" />
 
-  <!-- WAN Node Top-Left -->
-  <circle cx="932" cy="96" r="4" fill="#525252" />
-  <text x="904" y="99" class="node-label">WAN</text>
+  <!-- Outer edge nodes (r=118) + labels -->
+  <circle cx="941.56" cy="100.56" r="4.5" fill="#0d0d0d" stroke="#ff3b1d" stroke-width="1.2" />
+  <circle cx="1108.44" cy="100.56" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
+  <circle cx="941.56" cy="267.44" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
+  <circle cx="1108.44" cy="267.44" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
+  <text x="930" y="103" text-anchor="end" class="node-label" style="fill:#a3a3a3">WAN</text>
+  <text x="1120" y="103" class="node-label">DC</text>
+  <text x="930" y="270" text-anchor="end" class="node-label">LAN</text>
+  <text x="1120" y="270" class="node-label">LAB</text>
 
-  <!-- WAN Node Mid-Right -->
-  <circle cx="1044" cy="148" r="4" fill="#171717" stroke="#737373" stroke-width="1.2" />
-  <text x="1052" y="151" class="node-label">WAN</text>
+  <!-- Core -->
+  <circle cx="1025" cy="184" r="3.5" fill="#ff3b1d" class="core-pulse" />
+  <text x="1025" y="207" text-anchor="middle" class="node-label" style="fill:#a3a3a3">CORE</text>
 
-  <!-- WAN Node Bottom-Left -->
-  <circle cx="972" cy="222" r="4" fill="#171717" stroke="#737373" stroke-width="1.2" />
-  <text x="945" y="225" class="node-label">WAN</text>
-
-  <!-- Outer Edge Nodes -->
-  <circle cx="1093" cy="102" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
-  <circle cx="927" cy="268" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
-  <circle cx="1093" cy="268" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
-
-  <!-- 6. BOTTOM BAR PILLARS -->
-  <text x="32" y="342" class="mono-sm">01 <tspan class="mono-accent">/</tspan> ROUTING & SWITCHING</text>
-  <text x="530" y="342" class="mono-sm">02 <tspan class="mono-accent">/</tspan> AUTOMATION</text>
+  <!-- 6. BOTTOM BAR -->
+  <text x="32" y="342" class="mono-sm">01 <tspan class="mono-accent">/</tspan> ROUTING &amp; SWITCHING</text>
+  <text x="456" y="342" class="mono-sm">02 <tspan class="mono-accent">/</tspan> AUTOMATION</text>
   <text x="1168" y="342" text-anchor="end" class="mono-sm">03 <tspan class="mono-accent">/</tspan> HOMELAB</text>
 </svg>
