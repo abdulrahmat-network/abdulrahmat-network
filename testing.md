@@ -4,8 +4,6 @@
 
 ### `rahmat-core# show version`
 
-<div align="center">
-
 Focusing on resilient **network architecture**, **routing & switching**, and **infrastructure automation**. I design, simulate, and deploy high-availability networks—bridging traditional hardware topologies with modern Linux and cloud-native environments.
 
 ```ini
@@ -31,6 +29,8 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 | `VRRP / Failover` | `Zero Trust Access` | `Python Netmiko` | `Wireshark` |
 
 <br />
+<img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
+<br />
 
 ### `rahmat-core# show lldp neighbors`
 
@@ -42,8 +42,5 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 
 <br />
 
-<img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
-
-<br />
 
 <sub><code>root@abdulrahmat-network:~# exit</code></sub>
