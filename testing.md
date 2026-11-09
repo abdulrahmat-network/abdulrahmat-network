@@ -10,12 +10,12 @@ Focusing on resilient **network architecture**, **routing & switching**, and **i
 
 <br />
 
-<p>
-[system.identity]<br>
-user &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = "Abdul Rahmat"<br>
-handle &nbsp;&nbsp;&nbsp; = "@abdulrahmat-network"<br>
+<pre>
+[system.identity]
+user       = "Abdul Rahmat"
+handle     = "@abdulrahmat-network"
 specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
-</p>
+</pre>
 
 </div>
 
