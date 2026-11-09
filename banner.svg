@@ -186,11 +186,11 @@
   
   <!-- Rolling Dynamic Roles Container (5 Roles) -->
   <g transform="translate(30, 206)">
-    <text x="0" y="0" class="title-outline r-1" style="font-size: 58px; position: absolute;">NETWORK ENGINEER</text>
-    <text x="0" y="0" class="title-outline r-2" style="font-size: 58px; position: absolute;">NOC OPERATIONS</text>
-    <text x="0" y="0" class="title-outline r-3" style="font-size: 50px; position: absolute;">ROUTING & SWITCHING</text>
-    <text x="0" y="0" class="title-outline r-4" style="font-size: 52px; position: absolute;">INFRASTRUCTURE TECH</text>
-    <text x="0" y="0" class="title-outline r-5" style="font-size: 52px; position: absolute;">HOMELAB ENTHUSIAST</text>
+    <text x="0" y="0" class="title-outline r-1" style="font-size: 58px;">NETWORK ENGINEER</text>
+    <text x="0" y="0" class="title-outline r-2" style="font-size: 58px;">NOC OPERATIONS</text>
+    <text x="0" y="0" class="title-outline r-3" style="font-size: 50px;">ROUTING & SWITCHING</text>
+    <text x="0" y="0" class="title-outline r-4" style="font-size: 52px;">INFRASTRUCTURE TECH</text>
+    <text x="0" y="0" class="title-outline r-5" style="font-size: 52px;">HOMELAB ENTHUSIAST</text>
   </g>
 
   <!-- Orange Brutalist Handle Badge -->
