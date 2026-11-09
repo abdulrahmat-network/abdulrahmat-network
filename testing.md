@@ -18,6 +18,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 <br />
 
 ### `rahmat-core# show interfaces status`
+<div align="center">
 
 <img src="./stack-panel.svg" width="100%" alt="MikroTik, Cisco IOS, WireGuard, Linux, Ansible, Python, Proxmox, EVE-NG" />
 
@@ -31,6 +32,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 <br />
 <img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
 <br />
+</div>
 
 ### `rahmat-core# show lldp neighbors`
 
