@@ -1,13 +1,10 @@
 <div align="center">
-  <img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network Engineer" />
-  
-</div>
+
+<img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network Engineer" />
 
 <br />
 
 ### `rahmat-core# show version`
-
-
 
 Focusing on resilient **network architecture**, **routing & switching**, and **infrastructure automation**. I design, simulate, and deploy high-availability networks—bridging traditional hardware topologies with modern Linux and cloud-native environments.
 
