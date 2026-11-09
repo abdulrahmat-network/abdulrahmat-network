@@ -1,5 +1,3 @@
-<div align="center">
-
 <img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network Engineer" />
 
 <br />
@@ -15,29 +13,34 @@ handle     = "@abdulrahmat-network"
 specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 ```
 
+</div>
+
 <br />
 
 ### `rahmat-core# show interfaces status`
+<div align="center">
+
 <img src="./stack-panel.svg" width="100%" alt="MikroTik, Cisco IOS, WireGuard, Linux, Ansible, Python, Proxmox, EVE-NG" />
 
 | **Network & Routing** | **Security & Tunneling** | **SysAdmin & Automation** | **Simulation & Virtualization** |
-| :--- | :--- | :--- | :--- |
+| :---: | :---: | :---: | :---: |
 | `MikroTik RouterOS` | `Firewall Filtering` | `Linux (Debian/Ubuntu)` | `EVE-NG` |
 | `Cisco IOS / NX-OS` | `WireGuard / IPsec` | `Docker & Containers` | `GNS3` |
 | `OSPF` · `BGP` · `MPLS` | `VLAN / QinQ` | `Ansible` · `Bash` | `Proxmox VE` |
 | `VRRP / Failover` | `Zero Trust Access` | `Python Netmiko` | `Wireshark` |
 
+<img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
 <br />
-
-
+</div>
 
 ### `rahmat-core# show lldp neighbors`
 
-[GitHub](https://github.com/abdulrahmat-network) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/your-handle) &nbsp;·&nbsp; [Email](abdulrahmat2827@gmail.com
+<div align="center">
+
+[GitHub](https://github.com/abdulrahmat-network) &nbsp; · &nbsp; [LinkedIn](www.linkedin.com/in/abdul-rahmat-net) &nbsp; · &nbsp; [Email](mailto:abdulrahmat2827@gmail.com)
 <br />
-  <img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
-  <br />
-  <sub><code>root@abdulrahmat-network:~# exit</code></sub>
-  
+<sub><code>root@abdulrahmat-network:~# exit</code></sub>
 </div>
+
+
 
