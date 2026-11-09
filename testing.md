@@ -8,14 +8,11 @@
 
 Focusing on resilient **network architecture**, **routing & switching**, and **infrastructure automation**. I design, simulate, and deploy high-availability networks—bridging traditional hardware topologies with modern Linux and cloud-native environments.
 
-<br />
-
-<pre>
+```ini
 [system.identity]
 user       = "Abdul Rahmat"
 handle     = "@abdulrahmat-network"
 specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
-</pre>
 
 </div>
 
