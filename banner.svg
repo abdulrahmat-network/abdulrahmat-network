@@ -219,7 +219,7 @@
   <circle cx="1093" cy="268" r="4.5" fill="#0d0d0d" stroke="#525252" stroke-width="1.2" />
 
   <!-- 6. BOTTOM BAR PILLARS -->
-  <text x="32" y="342" class="mono-sm">01 <tspan class="mono-accent">/</tspan> ROUTING & SWITCHING</text>
+  <text x="32" y="342" class="mono-sm">01 <tspan class="mono-accent">/</tspan> ROUTING &amp; SWITCHING</text>
   <text x="530" y="342" class="mono-sm">02 <tspan class="mono-accent">/</tspan> AUTOMATION</text>
   <text x="1168" y="342" text-anchor="end" class="mono-sm">03 <tspan class="mono-accent">/</tspan> HOMELAB</text>
 </svg>
