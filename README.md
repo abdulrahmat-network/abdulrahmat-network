@@ -1,186 +1,47 @@
 <img src="./banner.svg" width="100%" />
-# 🌐 Setup GitHub Profile: `abdulrahmat-network`
-
-> **Kenapa banner sebelumnya tidak muncul di preview?**  
-> Editor di sebelah kanan otomatis menyaring/menghapus gambar eksternal (`<img src="...">`). Supaya kodenya tidak hilang, seluruh kode **Banner Animasi + README Minimalis** sudah aku amankan di dalam kotak kode di bawah ini.
-
----
-
-## 🚀 Opsi 1: README Minimalis + Animated Wave & Typing Banner (Langsung Copy-Paste)
-
-Salin seluruh isi blok kode di bawah ini dan tempelkan langsung ke file `README.md` di repositori GitHub `abdulrahmat-network/abdulrahmat-network` kamu:
-
-```html
 <div align="center">
-
-  <!-- 1. ANIMATED WAVING TECH BANNER -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1d,50:0f172a,100:00d2ff&height=220&section=header&text=ABDUL%20RAHMAT&fontSize=50&fontColor=ffffff&fontAlignY=38&desc=NETWORK%20%26%20INFRASTRUCTURE%20ENGINEER&descSize=16&descAlignY=60&animation=fadeIn" width="100%" alt="Banner" />
-
-  <!-- 2. ANIMATED TYPING TERMINAL -->
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=root%40abdulrahmat-network%3A~%23+ping+1.1.1.1;Routing+%26+Switching+%7C+Network+Security+%7C+Linux+SysAdmin;Building+High-Availability+Network+Infrastructure" alt="Typing SVG" />
-
+  <img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network & Infrastructure Engineer" />
+  <br /><br />
+  <kbd>🟢 BGP SESSION: ESTABLISHED</kbd>&nbsp;&nbsp;<kbd>⚡ LINK: 10GbE FULL-DUPLEX</kbd>&nbsp;&nbsp;<kbd>📍 INDONESIA</kbd>
 </div>
 
-```yaml
-hostname : abdulrahmat-network
-name     : Abdul Rahmat
-role     : Network & Infrastructure Engineer
-focus    : [Routing & Switching, Firewall & VPN, Linux Server, Network Automation]
-lab_env  : [EVE-NG, GNS3, Proxmox VE, Docker]
-status   : 🟢 Interface Up (10Gbps Full-Duplex)
+<br />
+
+### `01 // OVERVIEW`
+
+Focusing on resilient **network architecture**, **routing & switching**, and **infrastructure automation**. I design, simulate, and deploy high-availability networks—bridging traditional hardware topologies with modern Linux and cloud-native environments.
+
+```ini
+[system.identity]
+user       = "Abdul Rahmat"
+handle     = "@abdulrahmat-network"
+specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 ```
 
-### ⚡ Core Stack
+<br />
 
-```text
-[ MikroTik ]  [ Cisco ]  [ Linux ]  [ Docker ]  [ WireGuard ]  [ Ansible ]  [ Python ]  [ Wireshark ]
-```
+### `02 // CORE ARCHITECTURE & STACK`
+
+| **Network & Routing** | **Security & Tunneling** | **SysAdmin & Automation** | **Simulation & Virtualization** |
+| :--- | :--- | :--- | :--- |
+| `MikroTik RouterOS` | `Firewall Filtering` | `Linux (Debian/Ubuntu)` | `EVE-NG` |
+| `Cisco IOS / NX-OS` | `WireGuard / IPsec` | `Docker & Containers` | `GNS3` |
+| `OSPF` · `BGP` · `MPLS` | `VLAN / QinQ` | `Ansible` · `Bash` | `Proxmox VE` |
+| `VRRP / Failover` | `Zero Trust Access` | `Python Netmiko` | `Wireshark` |
+
+<br />
+
+### `03 // CURRENT TELEMETRY`
+
+> **Active Lab Focus** — Building automated multi-vendor network topologies, hardening edge routers, and documenting production-grade configurations.
 
 <div align="center">
-  <img src="https://activity-graph.herokuapp.com/graph?username=abdulrahmat-network&bg_color=0d1117&color=00f7ff&line=00a8ff&point=ffffff&area=true&hide_border=true" width="100%" alt="Activity Graph" />
+  <br />
+  <sub><b>CONNECT // PEERING REQUEST</b></sub>
+  <br /><br />
+  <a href="https://github.com/abdulrahmat-network"><kbd>GitHub</kbd></a>&nbsp;&nbsp;
+  <a href="https://linkedin.com"><kbd>LinkedIn</kbd></a>&nbsp;&nbsp;
+  <a href="mailto:abdulrahmat@example.com"><kbd>Email</kbd></a>
+  <br /><br />
+  <sub><code>root@abdulrahmat-network:~# exit</code></sub>
 </div>
-```
-
----
-
-## 🔥 Opsi 2: Custom Animated Network Banner (`banner.svg`) — *Paling Keren & Eksklusif*
-
-Kalau kamu mau banner animasi yang **jauh lebih keren dari banner standar** (ada animasi paket data berjalan di jalur fiber optik, titik *node* router berkedip, dan kursor CLI menyala):
-
-1. Buat file baru bernama **`banner.svg`** di repositori GitHub `abdulrahmat-network` kamu.
-2. *Copy-paste* kode SVG animasi di bawah ini ke dalam file **`banner.svg`** tersebut.
-3. Panggil di baris paling atas `README.md` kamu dengan: `<img src="./banner.svg" width="100%" />`
-
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 260" width="100%" height="100%">
-  <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060913" />
-      <stop offset="50%" stop-color="#0b1325" />
-      <stop offset="100%" stop-color="#071a2c" />
-    </linearGradient>
-
-    <!-- Cyan Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.6" />
-    </pattern>
-
-    <!-- Network Paths for Animated Packets -->
-    <path id="link1" d="M 550 60 L 700 130 L 880 70" fill="none" />
-    <path id="link2" d="M 550 200 L 700 130 L 900 190" fill="none" />
-    <path id="link3" d="M 450 130 L 700 130" fill="none" />
-  </defs>
-
-  <style>
-    .title { font: 800 42px 'JetBrains Mono', 'Fira Code', monospace; fill: #ffffff; letter-spacing: 3px; }
-    .subtitle { font: 600 15px 'JetBrains Mono', monospace; fill: #38bdf8; letter-spacing: 4px; }
-    .cli { font: 500 14px 'JetBrains Mono', monospace; fill: #94a3b8; }
-    .badge { font: 700 11px 'JetBrains Mono', monospace; fill: #10b981; letter-spacing: 1.5px; }
-    .node-label { font: 600 10px 'JetBrains Mono', monospace; fill: #64748b; }
-    .pulse-line {
-      stroke-dasharray: 8 6;
-      animation: dash 12s linear infinite;
-    }
-    .cursor {
-      animation: blink 1s step-end infinite;
-    }
-    @keyframes dash {
-      to { stroke-dashoffset: -200; }
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-  </style>
-
-  <!-- Background & Cyber Grid -->
-  <rect width="1000" height="260" rx="12" fill="url(#bg)" />
-  <rect width="1000" height="260" rx="12" fill="url(#grid)" />
-  <rect x="1" y="1" width="998" height="258" rx="12" fill="none" stroke="#1e293b" stroke-width="2" />
-
-  <!-- Animated Network Topology (Right Side) -->
-  <g opacity="0.85">
-    <!-- Static Fiber Links -->
-    <use href="#link1" stroke="#1e3a5f" stroke-width="2" />
-    <use href="#link2" stroke="#1e3a5f" stroke-width="2" />
-    <use href="#link3" stroke="#1e3a5f" stroke-width="2" />
-    <line x1="550" y1="60" x2="550" y2="200" stroke="#1e3a5f" stroke-width="1.5" class="pulse-line" />
-    <line x1="880" y1="70" x2="900" y2="190" stroke="#1e3a5f" stroke-width="1.5" class="pulse-line" />
-
-    <!-- Animated Data Packets Moving Across Links -->
-    <circle r="4" fill="#00f7ff" filter="url(#glow)">
-      <animateMotion dur="3s" repeatCount="indefinite">
-        <mpath href="#link1" />
-      </animateMotion>
-    </circle>
-    <circle r="4" fill="#10b981" filter="url(#glow)">
-      <animateMotion dur="3.8s" repeatCount="indefinite">
-        <mpath href="#link2" />
-      </animateMotion>
-    </circle>
-    <circle r="3.5" fill="#38bdf8" filter="url(#glow)">
-      <animateMotion dur="2.2s" repeatCount="indefinite">
-        <mpath href="#link3" />
-      </animateMotion>
-    </circle>
-
-    <!-- Network Nodes -->
-    <g transform="translate(450, 130)">
-      <circle r="6" fill="#0ea5e9" />
-      <text x="-30" y="22" class="node-label">EDGE-GW</text>
-    </g>
-    <g transform="translate(550, 60)">
-      <circle r="7" fill="#38bdf8" />
-      <text x="-25" y="-14" class="node-label">BGP-01</text>
-    </g>
-    <g transform="translate(550, 200)">
-      <circle r="7" fill="#38bdf8" />
-      <text x="-25" y="22" class="node-label">SW-DIST</text>
-    </g>
-    <!-- Core Router Hub with Radar Pulse -->
-    <g transform="translate(700, 130)">
-      <circle r="10" fill="none" stroke="#00f7ff" stroke-width="2">
-        <animate attributeName="r" values="8;26;8" dur="3s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.9;0;0.9" dur="3s" repeatCount="indefinite" />
-      </circle>
-      <circle r="9" fill="#00f7ff" filter="url(#glow)" />
-      <text x="-28" y="26" class="node-label" fill="#38bdf8">CORE-RTR</text>
-    </g>
-    <g transform="translate(880, 70)">
-      <circle r="7" fill="#10b981" />
-      <text x="-25" y="-14" class="node-label">CLOUD-A</text>
-    </g>
-    <g transform="translate(900, 190)">
-      <circle r="7" fill="#10b981" />
-      <text x="-25" y="22" class="node-label">CLOUD-B</text>
-    </g>
-  </g>
-
-  <!-- Left Content / HUD Text -->
-  <g transform="translate(55, 62)">
-    <!-- Status Pill -->
-    <rect x="0" y="-18" width="275" height="26" rx="13" fill="#06281e" stroke="#10b981" stroke-width="1" />
-    <circle cx="16" cy="-5" r="4.5" fill="#10b981">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite" />
-    </circle>
-    <text x="30" y="-1" class="badge">LINK UP • 10GBPS FULL-DUPLEX</text>
-
-    <!-- Main Name & Role -->
-    <text x="0" y="52" class="title">ABDUL RAHMAT</text>
-    <text x="2" y="82" class="subtitle">NETWORK &amp; INFRASTRUCTURE ENGINEER</text>
-
-    <!-- Terminal Prompt -->
-    <rect x="0" y="106" width="430" height="36" rx="6" fill="#090d16" stroke="#1e293b" stroke-width="1.2" />
-    <text x="14" y="129" class="cli">
-      <tspan fill="#10b981">root@abdulrahmat-network</tspan>:<tspan fill="#38bdf8">~</tspan># ./status.sh <tspan class="cursor" fill="#00f7ff">█</tspan>
-    </text>
-  </g>
-</svg>
-```
