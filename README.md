@@ -1,19 +1,21 @@
 <div align="center">
-  <img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network Engineer" />
+  <img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network & Infrastructure Engineer" />
+  <br /><br />
+  <kbd>🟢 BGP SESSION: ESTABLISHED</kbd>&nbsp;&nbsp;<kbd>⚡ LINK: 10GbE FULL-DUPLEX</kbd>&nbsp;&nbsp;<kbd>📍 INDONESIA</kbd>
 </div>
 
-<br/>
+<br />
 
-### `01 // SYSTEM IDENTITY`
+### `01 // OVERVIEW`
 
-Focusing on resilient **network architecture**, **routing & switching**, and **infrastructure automation**. Designing, simulating, and deploying high-availability networks—bridging physical routing topologies with Linux and virtualized homelab environments.
+Focusing on resilient **network architecture**, **routing & switching**, and **infrastructure automation**. I design, simulate, and deploy high-availability networks—bridging traditional hardware topologies with modern Linux and cloud-native environments.
 
 ```ini
-[node.identity]
-engineer   = "Abdul Rahmat"
-asn_handle = "@abdulrahmat-network"
-focus      = ["Routing & Switching", "Network Security", "Linux & Homelab"]
-status     = "BGP_ESTABLISHED // 99.9% UPTIME"
+[system.identity]
+user       = "Abdul Rahmat"
+handle     = "@abdulrahmat-network"
+specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
+```
 
 <br />
 
