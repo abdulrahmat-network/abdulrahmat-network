@@ -21,6 +21,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 <br />
 
 ### `rahmat-core# show interfaces status`
+<img src="./stack-panel.svg" width="100%" alt="MikroTik, Cisco IOS, WireGuard, Linux, Ansible, Python, Proxmox, EVE-NG" />
 
 | **Network & Routing** | **Security & Tunneling** | **SysAdmin & Automation** | **Simulation & Virtualization** |
 | :--- | :--- | :--- | :--- |
@@ -31,7 +32,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 
 <br />
 
-<img src="./stack-panel.svg" width="100%" alt="MikroTik, Cisco IOS, WireGuard, Linux, Ansible, Python, Proxmox, EVE-NG" />
+
 
 ### `rahmat-core# show lldp neighbors`
 
@@ -44,8 +45,9 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
   <a href="https://github.com/abdulrahmat-network"><kbd>GitHub</kbd></a>&nbsp;&nbsp;
   <a href="https://linkedin.com"><kbd>LinkedIn</kbd></a>&nbsp;&nbsp;
   <a href="mailto:abdulrahmat@example.com"><kbd>Email</kbd></a>
+  <img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
   <br /><br />
   <sub><code>root@abdulrahmat-network:~# exit</code></sub>
   
 </div>
-<img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
+
