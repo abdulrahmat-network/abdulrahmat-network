@@ -38,8 +38,6 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 <div align="center">
 
 [GitHub](https://github.com/abdulrahmat-network) &nbsp; · &nbsp; [LinkedIn](www.linkedin.com/in/abdul-rahmat-net) &nbsp; · &nbsp; [Email](mailto:abdulrahmat2827@gmail.com)
-<br />
-<sub><code>root@abdulrahmat-network:~# exit</code></sub>
 </div>
 
 
