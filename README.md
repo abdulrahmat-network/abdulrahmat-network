@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network & Infrastructure Engineer" />
+  <img src="./banner.svg" width="100%" alt="Abdul Rahmat — Network Engineer" />
   <br /><br />
   <kbd>🟢 BGP SESSION: ESTABLISHED</kbd>&nbsp;&nbsp;<kbd>⚡ LINK: 10GbE FULL-DUPLEX</kbd>&nbsp;&nbsp;<kbd>📍 INDONESIA</kbd>
 </div>
