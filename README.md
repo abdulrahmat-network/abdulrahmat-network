@@ -5,7 +5,7 @@
 
 <br />
 
-### `01 // OVERVIEW`
+### `rahmat-core# show version`
 
 Focusing on resilient **network architecture**, **routing & switching**, and **infrastructure automation**. I design, simulate, and deploy high-availability networks—bridging traditional hardware topologies with modern Linux and cloud-native environments.
 
@@ -18,7 +18,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 
 <br />
 
-### `02 // CORE ARCHITECTURE & STACK`
+### `rahmat-core# show interfaces status`
 
 | **Network & Routing** | **Security & Tunneling** | **SysAdmin & Automation** | **Simulation & Virtualization** |
 | :--- | :--- | :--- | :--- |
@@ -29,7 +29,7 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 
 <br />
 
-### `03 // CURRENT TELEMETRY`
+### `rahmat-core# show lldp neighbors`
 
 > **Active Lab Focus** — Building automated multi-vendor network topologies, hardening edge routers, and documenting production-grade configurations.
 
