@@ -13,6 +13,7 @@ Focusing on resilient **network architecture**, **routing & switching**, and **i
 user       = "Abdul Rahmat"
 handle     = "@abdulrahmat-network"
 specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
+```
 
 </div>
 
