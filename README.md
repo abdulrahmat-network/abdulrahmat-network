@@ -36,9 +36,10 @@ specialty  = ["Routing & Switching", "Network Security", "Linux Infrastructure"]
 
 ### `rahmat-core# show lldp neighbors`
 
-[GitHub](https://github.com/abdulrahmat-network) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/your-handle) &nbsp;·&nbsp; [Email](mailto:you@example.com)
+[GitHub](https://github.com/abdulrahmat-network) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/your-handle) &nbsp;·&nbsp; [Email](mailto:you@example.com
+<br />
   <img src="./footer.svg" width="100%" alt="Uptime matters. Documentation matters more." />
-  <br /><br />
+  <br />
   <sub><code>root@abdulrahmat-network:~# exit</code></sub>
   
 </div>
